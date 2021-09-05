@@ -4,12 +4,14 @@ class Category {
 	id?: string;
 	name: string;
 	description: string;
-	created_at?: Date = new Date();
+	created_at?: Date;
 
 	constructor() {
 		if (!this.id) {
 			this.id = uuid();
 		}
+
+		this.created_at = new Date();
 	}
 }
 
